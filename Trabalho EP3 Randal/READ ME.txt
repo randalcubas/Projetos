@@ -1,0 +1,11 @@
+Este projeto foi feito como um trabalho da faculdade pela matéria Introdução à Linguagem de Programação
+O projeto é de um jogo chamado SOKOBAN
+Neste jogo vc é um personagem que precisa levar as caixas da fase até o ponto final de cada uma, empurrando elas
+
+Para jogar, deve-se usar os comandos 'c' - cima, 'b' - baixo, 'd' - direita e 'e' - esquerda
+
+É necessário informar qual mapa deseja abrir, informando o arquivo .txt do mesmo.
+
+O jogo é simples mas que exige um raciocínio lógico para conseguir passar de fase
+
+BOM JOGO!
