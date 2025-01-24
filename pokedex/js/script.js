@@ -1,6 +1,8 @@
 const pokemonName = document.querySelector('.pokemon__name');
 const pokemonNumber = document.querySelector('.pokemon__number');
 const pokemonImage = document.querySelector('.pokemon__image');
+const pokemonType1 = document.querySelector('.pokemon__type__1');
+const pokemonType2 = document.querySelector('.pokemon__type__2');
 
 const form = document.querySelector('.form');
 const input = document.querySelector('.input__search');
@@ -27,13 +29,27 @@ const renderPokemon = async (pokemon) => {
 
     if (data) {
         pokemonImage.style.display = 'block';
+        pokemonType1.style.display = 'block';
+        pokemonType2.style.display = 'block';
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
         pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+        if(data['types'].length == 2){
+            type1Name = data['types'][0]['type']['name'];
+            pokemonType1.src = '../images/'+type1Name+'.png';
+            type2Name = data['types'][1]['type']['name'];
+            pokemonType2.src = '../images/'+type2Name+'.png';
+        }else {
+            type1Name = data['types'][0]['type']['name'];
+            pokemonType1.src = '../images/'+type1Name+'.png';
+            pokemonType2.style.display = 'none';
+        }
         input.value = '';
         searchPokemon = data.id;
     } else {
         pokemonImage.style.display = 'none';
+        pokemonType1.style.display = 'none';
+        pokemonType2.style.display = 'none';
         pokemonName.innerHTML = 'Not found :c';
         pokemonNumber.innerHTML = '';
 

@@ -33,6 +33,30 @@ main {
     height: 18%;
 }
 
+.type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    max-height: 30px;
+    min-height: 15px;
+    left: 25%;
+    bottom: 20%;
+    gap: 5px;
+    font-size: clamp(8px, 5vw, 25px);
+    font-weight: 600;
+}
+
+.pokemon__type__1 {
+    position: relative;
+    height: clamp(8px, 5vw, 35px);
+}
+
+.pokemon__type__2 {
+    position: relative;
+    height: clamp(8px, 5vw, 35px);
+}
+
 .pokemon__data {
     position: absolute;
     font-weight: 600;
